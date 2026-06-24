@@ -4,31 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Орловская оценочная компания — Независимая оценка в Орле и области</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="Профессиональная независимая оценка недвижимости, земли, автомобилей, наследства в Орле и Орловской области. Отчёты по ФЗ-135, работаем с 2010 года.">
-    <link rel="canonical" href="https://оценка57.рф">
-    
-    <script type="application/ld+json">
+    <link rel="canonical" href="https://xn--57-6kctzrf8d.xn--p1ai">
+ <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Орловская оценочная компания",
         "description": "Независимая оценка недвижимости, земли, автомобилей, наследства в Орле и Орловской области. Отчёты по ФЗ-135.",
+        "url": "https://xn--57-6kctzrf8d.xn--p1ai",
+        "logo": "https://xn--57-6kctzrf8d.xn--p1ai/favicon.ico",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "ул. Октябрьская, д. 38, офис 57",
+            "streetAddress": "ул. Октябрьская, д. 38",
             "addressLocality": "Орёл",
             "addressRegion": "Орловская область",
             "postalCode": "302028",
             "addressCountry": "RU"
         },
-        "telephone": ["+7-920-286-06-07"],
+        
+        "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "52.974378",
+                  "longitude": "36.062463"
+        },
+        "telephone": "+7-920-286-06-07",
         "email": "ocenka57@gmail.com",
-        "openingHours": "Mo-Fr 09:00-19:00",
-        "priceRange": "от 1000 ₽",
+        "openingHoursSpecification": [
+    {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+    },
+    {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "15:00"
+    }
+],
+       "priceRange": "1800+ RUB",
         "sameAs": [
             "https://yandex.ru/maps/-/CTAcfSpf",
-            "https://go.2gis.com/ZZySV"
+            "https://go.2gis.com/ZZySV",
+	  "https://maps.app.goo.gl/yFZx1m9YX4NDBNTH6"
         ]
     }
     </script>
@@ -128,13 +149,32 @@
         .mobile-menu a:last-child { border-bottom: none; }
 
         /* Hero */
-        .hero {
-            background: linear-gradient(rgba(0,48,135,0.85), rgba(0,64,150,0.85)), 
-                        url('hero.avif') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: clamp(100px, 16vh, 160px) 20px clamp(80px, 12vh, 120px);
-        }
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: clamp(100px, 16vh, 160px) 20px clamp(80px, 12vh, 120px);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,48,135,0.85),
+        rgba(0,64,150,0.85)
+    );
+    z-index: -1;
+}
         .hero h1 {
             font-size: clamp(2.2rem, 5.5vw, 3.8rem);
             margin-bottom: 1.2rem;
@@ -298,8 +338,8 @@
         }
     </style>
 </head>
-<body>
 
+<body>
 <header>
     <nav>
         <div class="logo">Орловская оценочная компания</div>
@@ -322,10 +362,23 @@
 </header>
 
 <section class="hero" aria-label="Вступление">
-    <h1>Независимая оценка в Орле и области</h1>
-    <p class="sub">Квартиры · Дома · Земля · Автомобили · Наследство · Банкротство · Ущерб</p>
-    <p class="marketing-text">Профессиональные отчёты по ФЗ-135 с выездом в любой район Орловской области. <span style="white-space: nowrap;">Работаем с 2010 года.</span></p>
-    <a href="tel:+79202860607" class="btn">📞 +7 (920) 286-06-07</a>
+   
+    <img
+        src="hero.avif"
+        alt="Независимая оценка недвижимости в Орле"
+        class="hero-image"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async">
+
+    <div class="hero-overlay"></div>
+
+
+ <h1>Независимая оценка в&nbsp;Орле и&nbsp;области</h1>
+<p class="sub">Квартиры · Дома · Земля · Транспорт · Оборудование · Наследство · Ущерб</p>
+<p class="marketing-text">Профессиональные отчёты по ФЗ-135 для банков, судов, нотариусов и процедур банкротства. Выезд в&nbsp;любой район области. Работаем&nbsp;с&nbsp;2010&nbsp;года.</p>
+<a href="tel:+79202860607" class="btn">📞 +7 (920) 286-06-07</a>
+
 </section>
 
 <section id="services">
@@ -334,7 +387,7 @@
     <div class="grid-3">
         <div class="card">
             <h3>🏠 Оценка жилой недвижимости</h3>
-            <p>Квартиры, жилой дома, комнаты. Объектами жилищных прав являются жилые помещения. Для оценки используются правоустанавливающие документы, техпаспорт, кадастровые выписки.</p>
+            <p>Квартиры, жилого дома, комнаты. Объектами жилищных прав являются жилые помещения. Для оценки используются правоустанавливающие документы, техпаспорт, кадастровые выписки.</p>
         </div>
         <div class="card">
             <h3>🌳 Оценка земельных участков</h3>
@@ -350,7 +403,7 @@
         </div>
         <div class="card">
             <h3>🏢 Коммерческая недвижимость</h3>
-            <p>Офисы, склады, торговые площади, производственные здания. Оценка аренды, инвестиций, залога.</p>
+            <p>Офисы, склады, торговые площади, производственные здания. Оценка для залога в банках, оспаривания кадастровой стоимости, сделок купли-продажи и аренды.</p>
         </div>
         <div class="card">
             <h3>⚙️ Машины и оборудование</h3>
@@ -376,14 +429,14 @@
             <tr><td>7</td><td>Машины, оборудование</td><td>от 1800</td></tr>
         </tbody>
     </table>
-    <p style="text-align:center; font-size:1rem; color:#555;">*Цены указаны как ориентир. Точная стоимость − после согласования.</p>
+    <p style="text-align:center; font-size:1rem; color:#555;">*Предоставленная информация не является публичной офертой. Итоговая стоимость услуг определяется после анализа документов на объект оценки.</p>
 </section>
 
 <section id="about">
     <h2>О компании</h2>
     <div style="max-width: 900px; margin:0 auto; font-size:1.1rem; color:#333; line-height:1.9;">
-        <p><strong>«Орловская оценочная компания»</strong> оказывает услуги в области независимой оценки всех видов собственности. Наш оценщик включён ПАО «Сбербанк» в реестр оценщиков банка, осуществляющих оценку объектов недвижимости в рамках кредитования физических лиц.</p>
-        <p style="margin-top:1rem;">Основной регион оказания оценочных услуг – г. Орёл и Орловская область. Оценочную деятельность мы осуществляем в соответствии с Федеральным законом № 135-ФЗ «Об оценочной деятельности в Российской Федерации».</p>
+        <p><strong>«Орловская оценочная компания»</strong> оказывает услуги в области независимой оценки всех видов собственности. Наши специалисты аккредитованы на платформе <strong>Домклик от Сбербанка</strong>, что позволяет оперативно выполнять оценку объектов недвижимости в рамках ипотечного кредитования физических лиц.</p>
+        <p style="margin-top:1rem;">Основной регион оказания оценочных услуг – г. Орёл и Орловская область. Оценочную деятельность мы осуществляем в соответствии с федеральным законом № 135-ФЗ «Об оценочной деятельности в Российской Федерации».</p>
         <p style="margin-top:1rem;">Мы оперативно реагируем на предложения и пожелания клиентов, что позволяет сократить сроки подготовки отчётов. Выезжаем в любую точку области – от Ливен до Мценска, от Болхова до Дмитровска.</p>
     </div>
 </section>
@@ -403,7 +456,7 @@
         </div>
         <div class="card">
             <h3>Демографический кризис ограничивает спрос</h3>
-            <p>С 2000 года население Орловской области уменьшилось на 198 088 человека. Падение доходов и демография сдерживают жилищное строительство.</p>
+            <p>С 2000 года население Орловской области уменьшилось на 198 088 человек. Демографические факторы и динамика доходов населения напрямую влияют на рыночную стоимость строящегося жилья в регионе.</p>
             <div class="meta">8 мая 2026</div>
         </div>
     </div>
@@ -417,9 +470,9 @@
             <span style="font-size: 1rem; color: #666;">(Выберите навигатор, чтобы открыть карточку компании или построить маршрут)</span>
         </p>
         <ul class="map-links">
-            <li>👉 <a href="https://yandex.ru/maps/-/CTAcfSpf" target="_blank">Открыть на Яндекс Картах</a></li>
-            <li>👉 <a href="https://go.2gis.com/ZZySV" target="_blank">Открыть в 2ГИС</a></li>
-            <li>👉 <a href="https://maps.google.com/?q=Орловская+оценочная+компания,+Октябрьская+ул.,+38,+Орел" target="_blank">Открыть на Google Картах</a></li>
+            <li>👉 <a href="https://yandex.ru/maps/-/CTAcfSpf" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></li>
+            <li>👉 <a href="https://go.2gis.com/ZZySV" target="_blank" rel="noopener">Открыть в 2ГИС</a></li>
+            <li>👉 <a href="https://maps.app.goo.gl/yFZx1m9YX4NDBNTH6" target="_blank" rel="noopener">Открыть на Google Картах</a></li>
         </ul>
         <p style="font-size:1.35rem; line-height:2.2;">
             📱 <strong><a href="tel:+79202860607" style="color:#003087;">+7 (920) 286-06-07</a></strong><br><br>
@@ -428,8 +481,8 @@
     </div>
     <p style="text-align:center; margin-top:40px;">
         <a href="tel:+79202860607" class="btn">Позвонить</a>
-        <a href="https://wa.me/79202860607" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-        <a href="https://t.me/+79202860607" target="_blank" class="btn btn-telegram">Telegram</a>
+        <a href="https://wa.me/79202860607" class="btn btn-whatsapp">WhatsApp</a>
+        <a href="https://t.me/+79202860607" target="_blank" rel="noopener" class="btn btn-telegram">Telegram</a>
     </p>
 </section>
 
@@ -442,7 +495,8 @@
         <a href="#contacts">Контакты</a>
     </div>
     <p style="margin-top:1rem;">© 2026 Орловская оценочная компания. Все права защищены.</p>
-    <p style="font-size:0.9rem; opacity:0.8;">Независимая оценка в Орле и Орловской области</p>
+    <p style="font-size:0.9rem; opacity:0.8;">Диплом оценщика, полис страхования ответственности и выписка из реестра СРО предоставляются по запросу заказчика.</p>
+
 </footer>
 
 <script>
@@ -456,7 +510,7 @@
             hamburger.textContent = expanded ? '✕' : '☰';
         });
 
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
