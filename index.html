@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Орловская оценочная компания — Независимая оценка в Орле и области</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Профессиональная независимая оценка недвижимости, земли, автомобилей, наследства в Орле и Орловской области. Отчёты по ФЗ-135, работаем с 2010 года.">
+    <link rel="canonical" href="https://оценка57.рф">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Орловская оценочная компания",
+        "description": "Независимая оценка недвижимости, земли, автомобилей, наследства в Орле и Орловской области. Отчёты по ФЗ-135.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Октябрьская, д. 38, офис 57",
+            "addressLocality": "Орёл",
+            "addressRegion": "Орловская область",
+            "postalCode": "302028",
+            "addressCountry": "RU"
+        },
+        "telephone": ["+7-920-286-06-07"],
+        "email": "ocenka57@gmail.com",
+        "openingHours": "Mo-Fr 09:00-19:00",
+        "priceRange": "от 1000 ₽",
+        "sameAs": [
+            "https://yandex.ru/maps/-/CTAcfSpf",
+            "https://go.2gis.com/ZZySV"
+        ]
+    }
+    </script>
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        :root {
+            --primary: #003087;
+            --primary-light: #0050b3;
+            --accent: #ff8c00;
+            --whatsapp: #25D366;
+            --telegram: #229ED9;
+            --gray-bg: #f8f9fa;
+            --text: #1a1a1a;
+            --radius: 16px;
+            --shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: white;
+        }
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.8rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2.5vw, 2rem);
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover { color: #ffcc80; border-bottom-color: #ffcc80; }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0 0.5rem;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 20px 1.5rem;
+            background: var(--primary);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,48,135,0.85), rgba(0,64,150,0.85)), 
+                        url('hero.avif') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: clamp(100px, 16vh, 160px) 20px clamp(80px, 12vh, 120px);
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+            font-weight: 700;
+        }
+        .hero .sub {
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            word-spacing: 2px;
+            font-weight: 500;
+        }
+        .hero .marketing-text {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 5px;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .btn-whatsapp { background-color: var(--whatsapp) !important; }
+        .btn-telegram { background-color: var(--telegram) !important; }
+
+        /* Sections */
+        section {
+            padding: clamp(60px, 8vh, 100px) 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        .section-desc {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 3rem;
+            font-size: 1.15rem;
+            color: #555;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+        }
+        .card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); }
+        .card p { color: #444; }
+        .card .meta { font-size: 0.9rem; color: #888; margin-top: 0.5rem; }
+
+        .bg-gray { background: var(--gray-bg); border-radius: var(--radius); padding: 2rem; }
+
+        /* Price table */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem auto;
+            max-width: 700px;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .price-table th {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .price-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        .price-table tr:nth-child(even) { background: #f9f9f9; }
+        .price-table tr:last-child td { border-bottom: none; }
+
+        /* Стили для центрированной секции контактов */
+        .map-links {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: inline-block;
+            text-align: left;
+        }
+        .map-links li { margin: 0.6rem 0; font-size: 1.15rem; }
+        .map-links a {
+            color: var(--primary);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .map-links a:hover { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 20px;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted transparent;
+        }
+        footer .footer-links a:hover { border-bottom-color: #ffcc80; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+        @media (max-width: 480px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .price-table { font-size: 0.9rem; }
+            .btn { width: 100%; margin: 5px 0; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Орловская оценочная компания</div>
+        <ul class="nav-links">
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#prices">Цены</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Мобильное меню">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#about">О компании</a>
+        <a href="#news">Новости</a>
+        <a href="#contacts">Контакты</a>
+    </div>
+</header>
+
+<section class="hero" aria-label="Вступление">
+    <h1>Независимая оценка в Орле и области</h1>
+    <p class="sub">Квартиры · Дома · Земля · Автомобили · Наследство · Банкротство · Ущерб</p>
+    <p class="marketing-text">Профессиональные отчёты по ФЗ-135 с выездом в любой район Орловской области. <span style="white-space: nowrap;">Работаем с 2010 года.</span></p>
+    <a href="tel:+79202860607" class="btn">📞 +7 (920) 286-06-07</a>
+</section>
+
+<section id="services">
+    <h2>Наши услуги</h2>
+    <p class="section-desc">Мы проводим оценку любых объектов недвижимости, транспорта и имущества для суда, нотариуса, банка или личных целей. Все отчёты соответствуют требованиям законодательства.</p>
+    <div class="grid-3">
+        <div class="card">
+            <h3>🏠 Оценка жилой недвижимости</h3>
+            <p>Квартиры, жилой дома, комнаты. Объектами жилищных прав являются жилые помещения. Для оценки используются правоустанавливающие документы, техпаспорт, кадастровые выписки.</p>
+        </div>
+        <div class="card">
+            <h3>🌳 Оценка земельных участков</h3>
+            <p>Садовые, огородные, сельхозназначения, под ИЖС. Оценка проводится с учётом категории земель, разрешённого использования, местоположения и обременений.</p>
+        </div>
+        <div class="card">
+            <h3>🚗 Оценка транспортных средств</h3>
+            <p>Легковые и грузовые автомобили, мотоциклы, прицепы, спецтехника. Используются ПТС, свидетельство о регистрации и другие документы.</p>
+        </div>
+        <div class="card">
+            <h3>📜 Оценка для нотариуса</h3>
+            <p>Для вступления в наследство, дарения, раздела имущества. Определяем рыночную стоимость для расчёта госпошлины и оформления свидетельства.</p>
+        </div>
+        <div class="card">
+            <h3>🏢 Коммерческая недвижимость</h3>
+            <p>Офисы, склады, торговые площади, производственные здания. Оценка аренды, инвестиций, залога.</p>
+        </div>
+        <div class="card">
+            <h3>⚙️ Машины и оборудование</h3>
+            <p>Оценка промышленного оборудования, станков, инвентаря для целей кредитования, страхования, бухгалтерского учёта.</p>
+        </div>
+    </div>
+</section>
+
+<section id="prices" class="bg-gray">
+    <h2>Стоимость услуг</h2>
+    <p class="section-desc">Окончательная цена согласовывается индивидуально и зависит от местонахождения объекта, срочности и объёма документов.</p>
+    <table class="price-table">
+        <thead>
+            <tr><th>№</th><th>Объект оценки</th><th>Стоимость, ₽</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Квартира</td><td>от 2000</td></tr>
+            <tr><td>2</td><td>Жилой дом</td><td>от 3000</td></tr>
+            <tr><td>3</td><td>Гараж</td><td>от 2000</td></tr>
+            <tr><td>4</td><td>Коммерческая недвижимость</td><td>от 4000</td></tr>
+            <tr><td>5</td><td>Земельный участок</td><td>от 3000</td></tr>
+            <tr><td>6</td><td>Автотранспорт</td><td>от 1800</td></tr>
+            <tr><td>7</td><td>Машины, оборудование</td><td>от 1800</td></tr>
+        </tbody>
+    </table>
+    <p style="text-align:center; font-size:1rem; color:#555;">*Цены указаны как ориентир. Точная стоимость − после согласования.</p>
+</section>
+
+<section id="about">
+    <h2>О компании</h2>
+    <div style="max-width: 900px; margin:0 auto; font-size:1.1rem; color:#333; line-height:1.9;">
+        <p><strong>«Орловская оценочная компания»</strong> оказывает услуги в области независимой оценки всех видов собственности. Наш оценщик включён ПАО «Сбербанк» в реестр оценщиков банка, осуществляющих оценку объектов недвижимости в рамках кредитования физических лиц.</p>
+        <p style="margin-top:1rem;">Основной регион оказания оценочных услуг – г. Орёл и Орловская область. Оценочную деятельность мы осуществляем в соответствии с Федеральным законом № 135-ФЗ «Об оценочной деятельности в Российской Федерации».</p>
+        <p style="margin-top:1rem;">Мы оперативно реагируем на предложения и пожелания клиентов, что позволяет сократить сроки подготовки отчётов. Выезжаем в любую точку области – от Ливен до Мценска, от Болхова до Дмитровска.</p>
+    </div>
+</section>
+
+<section id="news" class="bg-gray">
+    <h2>Новости рынка</h2>
+    <div class="grid-3">
+        <div class="card">
+            <h3>Вторичное жильё продаётся дольше</h3>
+            <p>Продажа квартиры на вторичном рынке в Орловской области в среднем занимает четыре месяца – с начала года показатель увеличился почти на треть.</p>
+            <div class="meta">6 июня 2026</div>
+        </div>
+        <div class="card">
+            <h3>Арендодатели снижают ставки</h3>
+            <p>В мае стоимость аренды жилья в Орле немного снизилась. На фоне снижения реальных доходов населения собственникам всё сложнее быстро сдать квартиры по высоким ставкам.</p>
+            <div class="meta">15 июня 2026</div>
+        </div>
+        <div class="card">
+            <h3>Демографический кризис ограничивает спрос</h3>
+            <p>С 2000 года население Орловской области уменьшилось на 198 088 человека. Падение доходов и демография сдерживают жилищное строительство.</p>
+            <div class="meta">8 мая 2026</div>
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <div style="text-align:center;">
+        <p style="font-size:1.35rem; line-height:1.8;">
+            📍 <strong>г. Орёл, ул. Октябрьская, д. 38</strong><br>
+            <span style="font-size: 1rem; color: #666;">(Выберите навигатор, чтобы открыть карточку компании или построить маршрут)</span>
+        </p>
+        <ul class="map-links">
+            <li>👉 <a href="https://yandex.ru/maps/-/CTAcfSpf" target="_blank">Открыть на Яндекс Картах</a></li>
+            <li>👉 <a href="https://go.2gis.com/ZZySV" target="_blank">Открыть в 2ГИС</a></li>
+            <li>👉 <a href="https://maps.google.com/?q=Орловская+оценочная+компания,+Октябрьская+ул.,+38,+Орел" target="_blank">Открыть на Google Картах</a></li>
+        </ul>
+        <p style="font-size:1.35rem; line-height:2.2;">
+            📱 <strong><a href="tel:+79202860607" style="color:#003087;">+7 (920) 286-06-07</a></strong><br><br>
+            ✉ <strong><a href="mailto:ocenka57@gmail.com?subject=Запрос на оценку&body=Здравствуйте,%0A%0AПрошу рассчитать стоимость оценки:" style="color:#003087; text-decoration:none;">ocenka57@gmail.com</a></strong>
+        </p>
+    </div>
+    <p style="text-align:center; margin-top:40px;">
+        <a href="tel:+79202860607" class="btn">Позвонить</a>
+        <a href="https://wa.me/79202860607" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+        <a href="https://t.me/+79202860607" target="_blank" class="btn btn-telegram">Telegram</a>
+    </p>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#about">О компании</a>
+        <a href="#news">Новости</a>
+        <a href="#contacts">Контакты</a>
+    </div>
+    <p style="margin-top:1rem;">© 2026 Орловская оценочная компания. Все права защищены.</p>
+    <p style="font-size:0.9rem; opacity:0.8;">Независимая оценка в Орле и Орловской области</p>
+</footer>
+
+<script>
+    (function() {
+        // Мобильное меню
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            const expanded = mobileMenu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', expanded);
+            hamburger.textContent = expanded ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.textContent = '☰';
+            });
+        });
+
+        // Плавный скролл для якорей
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
